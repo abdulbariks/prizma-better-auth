@@ -184,7 +184,7 @@ trustedOrigins: [process.env.APP_URL!],
     sendOnSignUp: true,
     autoSignInAfterVerification: true,
     sendVerificationEmail: async ({ user, url, token }, request) => {
-      // console.log("USER=========", user, url, token);
+      console.log("USER=========", user,"URL=========", url,"TOKEN=========", token);
 
       try {
         const verificationUrl = `${process.env.SERVER_APP_URL}/api/auth/verify-email?token=${token}`;
